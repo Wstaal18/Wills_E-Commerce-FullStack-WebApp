@@ -1,0 +1,129 @@
+.carticon-product-size {
+    width: 100px; /* Adjusted size for better layout */
+    height: auto;
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
+
+.cartitems {
+    margin: 100px 170px;
+}
+
+.cartitems hr {
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr 1fr 1fr 0.5fr; /* Adjusted columns */
+    align-items: center;
+    gap: 30px; /* Reduced gap for better spacing */
+    padding: 20px 0;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cartitems-format {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr 1fr 1fr 0.5fr; /* Consistent with the main layout */
+    align-items: center;
+    gap: 30px;
+}
+
+.cartitems-quantity {
+    border: 1px solid #ccc;
+    background-color: #ff1919;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carticon-product-icon {
+    display: block;
+    margin: 0 auto;
+}.cartitems-down {
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing between the two sections */
+    margin: 100px 0;
+    gap: 50px; /* Adds a gap between the "Cart Totals" and "Promo Code" sections */
+}
+
+.cartitems-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px; /* Reduced margin for better alignment */
+    gap: 40px;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.cartitems-total button {
+    width: 300px; /* Slightly larger button for emphasis */
+    height: 58px;
+    outline: none;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start; /* Aligns button to the left */
+}
+
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.cartitems-promocode p {
+    color: #555;
+}
+
+.cartitems-promobox {
+    display: flex; /* Use flexbox to align input and button on the same row */
+    align-items: center; /* Ensures both input and button are vertically aligned */
+    background: #eaeaea;
+    padding-left: 20px;
+    width: 504px;
+    height: 58px; /* Ensures consistent height for the container */
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect height */
+}
+
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    flex: 3; /* Allows input to take up most of the space */
+    height: 100%; /* Matches the height of the promo box */
+    line-height: 58px; /* Vertically centers the text */
+}
+
+.cartitems-promobox button {
+    flex: 1; /* Button takes up remaining space */
+    height: 100%; /* Matches the height of the promo box */
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounds only the right side of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the button text */
+    box-sizing: border-box; /* Ensures proper alignment with padding */
+}

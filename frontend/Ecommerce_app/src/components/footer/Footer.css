@@ -1,0 +1,78 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    width: 100%; /* Ensures the footer spans the full page width */
+    box-sizing: border-box; /* Includes padding in width calculations */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo p {
+    color: #383838;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Centers the links */
+    list-style: none;
+    gap: 40px;
+    color: #252525;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    cursor: pointer;
+}
+
+.footer-social-icon {
+    display: flex;
+    justify-content: center; /* Centers the icons */
+    gap: 20px;
+}
+
+.footer-icons-container {
+    padding: 10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    border-radius: 50%; /* Optional: Makes icons circular */
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center; /* Centers the copyright text */
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #1a1a1a;
+    font-size: 18px;
+    text-align: center; /* Centers multi-line text */
+}
+
+.footer-copyright hr {
+    width: 100%;
+    border: none;
+    height: 3px;
+    background: #c7c7c7;
+    margin: 0;
+}
+
+.footer-img {
+    width: 220px;
+    height: auto;
+}
