@@ -24,3 +24,88 @@
     display: flex;
     gap: 30px;
 }
+
+
+/* Large Screens */
+@media (max-width: 1280px) {
+    .relatedproducts {
+        gap: 15px;
+        height: auto;
+        max-width: 100vw;
+    }
+
+    .relatedproducts h1 {
+        font-size: 45px;
+    }
+
+    .relatedproducts hr {
+        width: 180px;
+        height: 5px;
+    }
+
+    .relatedproducts-item {
+        gap: 25px;
+    }
+}
+
+/* Tablet Screens (1024px and below) */
+@media (max-width: 1024px) {
+    .relatedproducts h1 {
+        font-size: 40px;
+    }
+
+    .relatedproducts hr {
+        width: 150px;
+        height: 5px;
+    }
+
+    .relatedproducts-item {
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+        gap: 30px;
+    }
+}
+
+/* Mobile Screens (800px and below) */
+@media (max-width: 800px) {
+    .relatedproducts h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .relatedproducts hr {
+        width: 120px;
+        height: 4px;
+    }
+
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        margin-top: 30px;
+        gap: 15px;
+    }
+}
+
+/* Small Mobile Screens (500px and below) */
+@media (max-width: 500px) {
+    .relatedproducts {
+        height: 660px;
+        padding-top: 30px; /* Add extra space above the component */
+        padding-bottom: 30px; /* Add extra space below the component */
+        gap: 20px; /* Increase the gap between elements */
+    }
+
+    .relatedproducts h1 {
+        font-size: 24px;
+    }
+
+    .relatedproducts hr {
+        width: 100px;
+        height: 3px;
+    }
+
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 15px; /* Slightly increase gap between items */
+    }
+}

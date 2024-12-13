@@ -9,3 +9,30 @@
     text-transform: capitalize;
 }
 
+
+@media (max-width: 1280px) {
+    .breadcrum{
+        margin: 80px 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .breadcrum{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .breadcrum{
+        margin: 100px 50px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .breadcrum{
+        font-size: 12px;
+    }
+}
+

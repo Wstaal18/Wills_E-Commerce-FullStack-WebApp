@@ -29,7 +29,7 @@ export default function Hero() {
          <img
           src={product_1} 
           alt="Hero"
-          className="" // Updated class
+          className="hero-right-image" // Updated class
         />
          
         </div>

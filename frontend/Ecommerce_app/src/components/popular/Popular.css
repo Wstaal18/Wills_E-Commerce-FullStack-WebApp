@@ -1,27 +1,113 @@
-.popular{
-    display:flex;
+.popular {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    height: auto;
+    padding-top: 30px; /* Add extra space above the component */
+    padding-bottom: 30px; /* Add extra space below the component */
 }
 
-.popular h1{
+.popular h1 {
     color: #171717;
     font-size: 50px;
     font-weight: 600;
 }
 
-.popular hr{
+.popular hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
 
-.popular-item{
+.popular-item {
     margin-top: 50px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row by default */
     gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Large Screens */
+@media (max-width: 1280px) {
+    .popular {
+        gap: 15px;
+        height: auto;
+        max-width: 100vw;
+    }
+
+    .popular h1 {
+        font-size: 45px;
+    }
+
+    .popular hr {
+        width: 180px;
+        height: 5px;
+    }
+
+    .popular-item {
+        gap: 25px;
+    }
+}
+
+/* Tablet Screens (1024px and below) */
+@media (max-width: 1024px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+
+    .popular hr {
+        width: 150px;
+        height: 5px;
+    }
+
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 20px;
+    }
+}
+
+/* Mobile Screens (800px and below) */
+@media (max-width: 800px) {
+    .popular h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .popular hr {
+        width: 120px;
+        height: 4px;
+    }
+
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        margin-top: 30px;
+        gap: 15px;
+    }
+}
+
+/* Small Mobile Screens (500px and below) */
+@media (max-width: 500px) {
+    .popular {
+        height: 660px;
+        padding-top: 30px; /* Add extra space above the component */
+        padding-bottom: 30px; /* Add extra space below the component */
+        gap: 20px; /* Increase the gap between elements */
+    }
+
+    .popular h1 {
+        font-size: 24px;
+    }
+
+    .popular hr {
+        width: 100px;
+        height: 3px;
+    }
+
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 15px; /* Slightly increase gap between items */
+    }
+}

@@ -1,28 +1,119 @@
-.new-collections{
-    display:flex;
+.new-collections {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-bottom: 100px;
+    padding-bottom: 50px; /* Ensure consistent spacing below */
+    height: auto; /* Allow dynamic height based on content */
+    overflow: hidden; /* Prevent accidental overflow */
 }
 
-.new-collections h1{
+.new-collections h1 {
     color: #171717;
     font-size: 50px;
     font-weight: 600;
+    text-align: center; /* Center-align for smaller screens */
+    margin: 0; /* Remove default margin */
 }
 
-.new-collections hr{
+.new-collections hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
+    margin: 0; /* Remove default margin */
 }
 
-.collections{
+.collections {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
     gap: 30px;
 }
 
+/* Large Screens */
+@media (max-width: 1280px) {
+    .new-collections {
+        gap: 15px;
+        height: auto;
+        max-width: 100vw;
+    }
+
+    .new-collections h1 {
+        font-size: 45px;
+    }
+
+    .new-collections hr {
+        width: 180px;
+        height: 5px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 25px;
+    }
+}
+
+/* Tablet Screens (1024px and below) */
+@media (max-width: 1024px) {
+    
+    .new-collections h1 {
+        font-size: 40px;
+    }
+
+    .new-collections hr {
+        width: 150px;
+        height: 5px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 20px;
+    }
+}
+
+/* Mobile Screens (800px and below) */
+@media (max-width: 800px) {
+
+
+    .new-collections h1 {
+        font-size: 30px;
+    }
+
+    .new-collections hr {
+        width: 120px;
+        height: 4px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 15px;
+        margin-top: 30px;
+    }
+}
+
+/* Small Mobile Screens (500px and below) */
+@media (max-width: 500px) {
+    .new-collections {
+        height: 660px;
+        padding-top: 30px; /* Add extra space above the component */
+        padding-bottom: 30px; /* Add extra space below the component */
+        gap: 20px; /* Increase the gap between elements */
+    }
+
+    .new-collections h1 {
+        font-size: 24px;
+    }
+
+    .new-collections hr {
+        width: 100px;
+        height: 3px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 1 item per row */
+        gap: 15px;
+        
+    }
+}
