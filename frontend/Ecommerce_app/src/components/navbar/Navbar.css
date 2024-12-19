@@ -121,6 +121,9 @@
 }
 /* Responsive Design */
 
+.nav-login-cart button{
+    color: #171717;
+}
 @media (max-width: 1280px) {
     .navbar {
         padding: 12px 50px;
@@ -237,7 +240,9 @@
     .nav-menu {
         flex-direction: column; /* Stack menu items vertically */
         align-items: center; /* Center items */
-        gap: 15px;
+        height: 70px;
+        top: 50px;
+
     }
 
     .nav-menu hr {

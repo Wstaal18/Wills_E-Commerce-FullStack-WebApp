@@ -27,7 +27,7 @@ export default function CartItems() {
                                 <button className="cartitems-quantity">{cartItems[e.id]}</button>
                                 <p>£{e.new_price * cartItems[e.id]}</p>
                                 <i
-                                    className="fa-solid fa-trash"
+                                    className="fa-solid fa-trash cartitems-remove-icon"
                                     onClick={() => {
                                         removeFromCart(e.id);
                                     }}

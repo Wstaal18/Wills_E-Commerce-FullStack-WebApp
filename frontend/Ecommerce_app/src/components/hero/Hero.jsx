@@ -21,7 +21,7 @@ export default function Hero() {
                 <p>for everyone</p>
             </div>
             <div className='hero-latest-btn'>
-                <div>Latest Collection</div>
+                <button>Latest Collection</button>
                 <i className="fa-solid fa-arrow-right"></i>
             </div>
         </div>
