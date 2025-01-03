@@ -46,69 +46,108 @@ app.post("/upload",upload.single('product'),(req,res)=>{
 
 //Schema for creating products
 const Product = mongoose.model("Product", {
-    id:{
-        type: Number,
-        required:true,
+    id: {
+      type: Number,
+      required: true,
     },
-    name:{
-        type:String,
-        required:true,
+    name: {
+      type: String,
+      required: true,
     },
-    image:{
-        type:String,
-        required:true,
+    image: {
+      type: String,
+      required: true,
     },
-    category:{
-        type:String,
-        required:true,
+    category: {
+      type: String,
+      required: true,
     },
-    new_price:{
-        type:Number,
-        required:true,
+    tags: {
+        type: String,
+        required: false,
     },
-    old_price:{
-        type:Number,
-        required:true,
+    product_category:{
+        type: String, 
+        required: false,
     },
-    date:{
-        type:Date,
-        default:Date.now,
+    new_price: {
+      type: Number,
+      required: true,
     },
-    available:{
-        type:Boolean,
-        default:true,
-    }
-})
+    old_price: {
+      type: Number,
+      required: true,
+    },
+    brief_description: { // New field
+      type: String,
+      required: false,
+    },
+    full_description: { // New field
+        type: String,
+        required: false,
+      },
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+    available: {
+      type: Boolean,
+      default: true,
+    },
+  });
+  
 
 //Creating API for Adding Products
-app.post('/addproduct', async (req,res)=>{
+app.post('/addproduct', async (req, res) => {
     let products = await Product.find({});
-    let id;
-    if(products.length>0){
-        let last_product_array = products.slice(-1);
-        let last_product = last_product_array[0];
-        id = last_product.id+1;
-    }
-    else{
-        id=1;
-    }
-    
+    let id = products.length > 0 ? products.slice(-1)[0].id + 1 : 1;
+  
     const product = new Product({
-        id:id,
-        name:req.body.name,
-        image:req.body.image,
-        category:req.body.category,
-        new_price:req.body.new_price,
-        old_price:req.body.old_price,
+      id: id,
+      name: req.body.name,
+      image: req.body.image,
+      category: req.body.category,
+      tags: req.body.tags,
+      product_category: req.body.product_category,
+      new_price: req.body.new_price,
+      old_price: req.body.old_price,
+      brief_description: req.body.brief_description,
+      full_description: req.body.full_description, // Save full description
     });
+  
     console.log(product);
     await product.save();
-    console.log("Saved");
+    console.log('Saved');
     res.json({
-        success:true,
-        name:req.body.name,
-    })
-})
+      success: true,
+      name: req.body.name,
+    });
+  });
+  app.post('/addproduct', async (req, res) => {
+    let products = await Product.find({});
+    let id = products.length > 0 ? products.slice(-1)[0].id + 1 : 1;
+  
+    const product = new Product({
+      id: id,
+      name: req.body.name,
+      image: req.body.image,
+      category: req.body.category,
+      new_price: req.body.new_price,
+      old_price: req.body.old_price,
+      brief_description: req.body.brief_description,
+      full_description: req.body.full_description, // Save full description
+    });
+  
+    console.log(product);
+    await product.save();
+    console.log('Saved');
+    res.json({
+      success: true,
+      name: req.body.name,
+    });
+  });
+    
+  
 
 //Creating API for deleting Products
 app.post('/removeproduct', async(req,res)=>{
